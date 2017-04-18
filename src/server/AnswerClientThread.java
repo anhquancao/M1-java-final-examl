@@ -45,9 +45,7 @@ public class AnswerClientThread extends Thread {
                 JAXBContext contextObj = JAXBContext.newInstance(XMLMessage.class);
                 Marshaller marshallerObj = contextObj.createMarshaller();
                 marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
                 XMLMessage message = new XMLMessage(answer);
-
                 marshallerObj.marshal(message, writer);
 //                writer.write(answer.toString());
             } else {
